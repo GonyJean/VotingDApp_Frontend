@@ -2,7 +2,7 @@
  * @Author: Yxj
  * @LastEditors: Yxj
  * @Date: 2024-03-15 17:29:10
- * @LastEditTime: 2024-03-15 18:24:21
+ * @LastEditTime: 2024-03-15 19:31:45
  * @Description: file content
  * @FilePath: \my-rainbowkit-app\pages\vote\index.tsx
  */
@@ -14,6 +14,7 @@ import {
   CardBody,
   CardFooter,
   Image,
+  Divider,
   Button,
 } from "@nextui-org/react";
 const Vote = () => {
@@ -30,7 +31,7 @@ const Vote = () => {
       {/* <h3>Read contract</h3> */}
       {/* Balance of your wagmi NFT : {data?.toString()} */}
       <Button
-      className=""
+        className=""
         color="primary"
         style={{ marginLeft: "8px" }}
         onPress={(e) => {
@@ -53,6 +54,11 @@ const Vote = () => {
                 width={270}
               />
             </CardBody>
+
+            <div className="justify-center flex">
+                  <Button size="sm" color="primary" className="mr-5">赞成</Button>
+                  <Button size="sm" color="danger">否定</Button>
+            </div>
           </Card>
         );
       })}
