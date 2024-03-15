@@ -1,29 +1,22 @@
-This is a [RainbowKit](https://rainbowkit.com) + [wagmi](https://wagmi.sh) + [Next.js](https://nextjs.org/) project bootstrapped with [`create-rainbowkit`](/packages/create-rainbowkit).
+# 去中心化的投票系统
+1. 定义应用目的
+   创建一个去中心化的投票系统，允许用户在区块链上匿名投票。该系统需满足以下要求：
+   用户能够创建投票。  
+   用户能够参与投票。  
+   投票结果是公开透明的。
+
+2. 选择区块链平台
+   选择以太坊，因为它是最流行的智能合约平台，具有广泛的开发者社区和成熟的开发工具。
+3. 合约开发
+   使用 ```solidity``` 部署在 ```sepolia``` 测试链
+   合约地址:```0xEF9a9493E0312CbF08fa999b4B7570af86554A44```
+4. 前端界面( RainbowKit + wagmi + Next.js + NextUI)  
+   TODO：  
+   √显示所有投票问题。  
+   提供创建投票的表单。  
+   允许用户选择投票并提交他们的选择。  
+   展示投票结果。
 
 ## Getting Started
 
-First, run the development server:
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-## Learn More
-
-To learn more about this stack, take a look at the following resources:
-
-- [RainbowKit Documentation](https://rainbowkit.com) - Learn how to customize your wallet connection flow.
-- [wagmi Documentation](https://wagmi.sh) - Learn how to interact with Ethereum.
-- [Next.js Documentation](https://nextjs.org/docs) - Learn how to build a Next.js application.
-
-You can check out [the RainbowKit GitHub repository](https://github.com/rainbow-me/rainbowkit) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+``` npm run dev ```
