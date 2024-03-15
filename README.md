@@ -1,4 +1,7 @@
 # 去中心化的投票系统
+
+## Getting Started
+``` npm run dev ```
 1. 定义应用目的
    创建一个去中心化的投票系统，允许用户在区块链上匿名投票。该系统需满足以下要求：
    用户能够创建投票。  
@@ -7,16 +10,16 @@
 
 2. 选择区块链平台
    选择以太坊，因为它是最流行的智能合约平台，具有广泛的开发者社区和成熟的开发工具。
+
 3. 合约开发
    使用 ```solidity``` 部署在 ```sepolia``` 测试链
    合约地址:```0xEF9a9493E0312CbF08fa999b4B7570af86554A44```
-4. 前端界面( RainbowKit + wagmi + Next.js + NextUI)  
+
+4. 前端React项目( RainbowKit + wagmi + Next.js + NextUI)  
    TODO：  
    √显示所有投票问题。  
    提供创建投票的表单。  
    允许用户选择投票并提交他们的选择。  
    展示投票结果。
 
-## Getting Started
 
-``` npm run dev ```
