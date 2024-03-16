@@ -2,7 +2,7 @@
  * @Author: Yxj
  * @LastEditors: Yxj
  * @Date: 2024-03-12 19:03:54
- * @LastEditTime: 2024-03-17 00:14:55
+ * @LastEditTime: 2024-03-17 00:56:44
  * @Description: file content
  * @FilePath: \pages\index.tsx
  */
@@ -30,8 +30,8 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <h1 className='font-bold text-4xl'>Voting-DApp</h1>
         <p className="text-2xl mb-2">
-          Welcome to VotingDapp, a decentralized voting application built on
-          Ethereum.</p>
+          欢迎使用VotingDapp,一个基于Ethereum的去中心化投票系统
+           </p>
 
        <div className="mb-3">
         <ConnectButton label={!isConnected?`请连接钱包并切换至sepolia...`:`Connect Wallet`} accountStatus="avatar" />
