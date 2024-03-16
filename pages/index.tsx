@@ -2,7 +2,7 @@
  * @Author: Yxj
  * @LastEditors: Yxj
  * @Date: 2024-03-12 19:03:54
- * @LastEditTime: 2024-03-17 00:56:44
+ * @LastEditTime: 2024-03-17 00:58:20
  * @Description: file content
  * @FilePath: \pages\index.tsx
  */
@@ -30,7 +30,7 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <h1 className='font-bold text-4xl'>Voting-DApp</h1>
         <p className="text-2xl mb-2">
-          欢迎使用VotingDapp,一个基于Ethereum的去中心化投票系统
+          欢迎使用Voting-DApp,一个基于Ethereum的去中心化投票系统
            </p>
 
        <div className="mb-3">
