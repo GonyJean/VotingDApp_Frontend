@@ -18,7 +18,7 @@
 
 ## 前端 React 项目
 
-`RainbowKit + wagmi + Next.js + NextUI`
+`RainbowKit + wagmi + Next.js + NextUI+ Tailwind`
 
 ## TODO:
 
