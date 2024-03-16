@@ -73,7 +73,9 @@ export const VoteForm = (
                 <Input type="text" label="投票名称" onValueChange={(v)=>{
                     setquestionStr(v);
                 }} />
-                <Input type="text" label="投票图片链接" />
+                <Input type="text" label="投票图片链接" onValueChange={(v)=>{
+                    setquestionImgUrlStr(v);
+                }} />
               </ModalBody>
               <ModalFooter className="justify-center">
                 <div className="text-center">
@@ -84,9 +86,9 @@ export const VoteForm = (
                     onPress={() => {
                       dispatchContract({
                         abi,
-                        address: "0xEF9a9493E0312CbF08fa999b4B7570af86554A44",
+                        address: "0x0d77736F42EF631771550Ec616D202c4dc2A530B",
                         functionName: "createPoll",
-                        args: [questionStr],
+                        args: [questionStr,questionImgUrlStr],
                       });
                     }}
                   >

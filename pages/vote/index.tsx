@@ -2,7 +2,7 @@
  * @Author: Yxj
  * @LastEditors: Yxj
  * @Date: 2024-03-15 17:29:10
- * @LastEditTime: 2024-03-17 00:47:56
+ * @LastEditTime: 2024-03-17 01:41:23
  * @Description: file content
  * @FilePath: \pages\vote\index.tsx
  */
@@ -60,7 +60,7 @@ export const Vote = () => {
   });
   const { data, refetch, isFetching } = useReadContract({
     abi,
-    address: "0xEF9a9493E0312CbF08fa999b4B7570af86554A44",
+    address: "0x0d77736F42EF631771550Ec616D202c4dc2A530B",
     functionName: "getAllPollResults",
   });
   const [voteFormOpen, setVoteFormOpen] = useState(false);
@@ -76,7 +76,7 @@ export const Vote = () => {
     functionName,
     args,
   }: writeContractType) => {
-    const res = await writeContract({
+    writeContract({
       abi,
       address,
       functionName,
@@ -117,7 +117,7 @@ export const Vote = () => {
             <Image
               alt="Card background"
               className="object-cover rounded-xl"
-              src="https://nextui.org/images/hero-card.jpeg"
+              src={e.imgUrl}
               width={270}
             />
           </CardBody>
@@ -141,7 +141,7 @@ export const Vote = () => {
               onClick={() => {
                 dispatchContract({
                   abi,
-                  address: "0xEF9a9493E0312CbF08fa999b4B7570af86554A44",
+                  address: "0x0d77736F42EF631771550Ec616D202c4dc2A530B",
                   functionName: "vote",
                   args: [i, true],
                 });
@@ -156,7 +156,7 @@ export const Vote = () => {
               onClick={() => {
                 dispatchContract({
                   abi,
-                  address: "0xEF9a9493E0312CbF08fa999b4B7570af86554A44",
+                  address: "0x0d77736F42EF631771550Ec616D202c4dc2A530B",
                   functionName: "vote",
                   args: [i, false],
                 });
@@ -172,6 +172,8 @@ export const Vote = () => {
       <Modal
         backdrop="opaque"
         isOpen={isOpen}
+        hideCloseButton={isConfirming || isPending}
+        isDismissable={false}
         onOpenChange={onOpenChange}
         classNames={{
           backdrop:
@@ -194,19 +196,20 @@ export const Vote = () => {
                 )}
               </ModalBody>
               <ModalFooter>
-                <Button
-                  color="primary"
-                  onPress={onClose}
-                  isLoading={isPending || isConfirming}
-                >
-                  确定
-                </Button>
+                {isPending || isConfirming ? null : (
+                  <Button
+                    color="primary"
+                    onPress={onClose}
+                    isLoading={isPending || isConfirming}
+                  >
+                    确定
+                  </Button>
+                )}
               </ModalFooter>
             </>
           )}
         </ModalContent>
       </Modal>
-
       <VoteForm
         open={voteFormOpen}
         setVoteFormOpen={setVoteFormOpen}
