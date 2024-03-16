@@ -2,15 +2,16 @@
  * @Author: Yxj
  * @LastEditors: Yxj
  * @Date: 2024-03-15 17:29:10
- * @LastEditTime: 2024-03-16 17:47:39
+ * @LastEditTime: 2024-03-17 00:47:56
  * @Description: file content
- * @FilePath: \my-rainbowkit-app\pages\vote\index.tsx
+ * @FilePath: \pages\vote\index.tsx
  */
 import React, {
   useRef,
   useImperativeHandle,
   forwardRef,
   useEffect,
+  useState,
 } from "react";
 import {
   useAccount,
@@ -40,14 +41,14 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 import { abi } from "./abi";
-
-function Vote() {
-  interface writeContractType {
-    abi: readonly any[];
-    address: `0x${string}`;
-    functionName: string;
-    args: any[];
-  }
+import { VoteForm } from "./form";
+export interface writeContractType {
+  abi: readonly any[];
+  address: `0x${string}`;
+  functionName: string;
+  args: any[];
+}
+export const Vote = () => {
   const { address } = useAccount();
   const { data: hash, writeContract, isPending, error } = useWriteContract();
   const {
@@ -62,13 +63,11 @@ function Vote() {
     address: "0xEF9a9493E0312CbF08fa999b4B7570af86554A44",
     functionName: "getAllPollResults",
   });
-
+  const [voteFormOpen, setVoteFormOpen] = useState(false);
   useEffect(() => {
-    if (error ||isConfirmed) {
-        
-    onOpen();
-    refetch();
-
+    if (error || isConfirmed) {
+      onOpen();
+      refetch();
     }
   }, [error, isConfirmed]);
   const dispatchContract = async ({
@@ -87,7 +86,7 @@ function Vote() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
-    <div>
+    <div className="text-center">
       {/* <h3>Read contract</h3> */}
       {/* Balance of your wagmi NFT : {data?.toString()} */}
       {/* <Button
@@ -100,6 +99,15 @@ function Vote() {
       >
         {isFetching ? "读取合约信息..." : "读取完毕"}
       </Button> */}
+      <Button
+        color="primary"
+        className="w-unit-6xl mb-3"
+        onClick={(e) => {
+          setVoteFormOpen(true);
+        }}
+      >
+        创建新投票
+      </Button>
       {data?.map((e, i) => (
         <Card className="py-4 mb-3" key={i}>
           <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
@@ -119,7 +127,7 @@ function Vote() {
               <span>{e.yesCount.toString()}</span>
             </span>
             <span>
-              否定数:
+              反对数:
               <span>{e.noCount.toString()}</span>
             </span>
           </div>
@@ -137,7 +145,7 @@ function Vote() {
                   functionName: "vote",
                   args: [i, true],
                 });
-                 onOpen();
+                onOpen();
               }}
             >
               {isPending || isConfirming ? `交易确认中...` : `赞成`}
@@ -152,10 +160,10 @@ function Vote() {
                   functionName: "vote",
                   args: [i, false],
                 });
-                 onOpen();
+                onOpen();
               }}
             >
-              {isPending || isConfirming ? `交易确认中...` : `否定`}
+              {isPending || isConfirming ? `交易确认中...` : `反对`}
             </Button>
           </div>
         </Card>
@@ -198,8 +206,15 @@ function Vote() {
           )}
         </ModalContent>
       </Modal>
+
+      <VoteForm
+        open={voteFormOpen}
+        setVoteFormOpen={setVoteFormOpen}
+        dispatchContract={dispatchContract}
+        isPending={isPending}
+        isConfirming={isConfirming}
+        isConfirmed={isConfirmed}
+      ></VoteForm>
     </div>
   );
-}
-
-export default Vote;
+};

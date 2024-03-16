@@ -1,8 +1,8 @@
-# VotingDapp-去中心化的投票系统
+# VotingDapp-去中心化投票系统
 
 ## Getting Started
-
-`npm run dev`
+`pnpm install`
+`pnpm run dev`
 
 ## 应用目的
 
@@ -13,9 +13,10 @@
 
 ## 合约开发
 
-使用 `solidity` 部署在 `sepolia` 测试链
-合约地址:`0xEF9a9493E0312CbF08fa999b4B7570af86554A44`
-
+使用 `solidity` 开发,部署在 `sepolia` 测试链  
+合约地址:`0xEF9a9493E0312CbF08fa999b4B7570af86554A44`  
+合约项目地址:[VotingDapp_Contract](https://github.com/GonyJean/VotingDapp_Contract)
+![这是图片](/img/markmap.png "合约流程")
 ## 前端 React 项目
 
 `RainbowKit + wagmi + Next.js + NextUI+ Tailwind`

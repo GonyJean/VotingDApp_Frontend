@@ -2,7 +2,7 @@
  * @Author: Yxj
  * @LastEditors: Yxj
  * @Date: 2024-03-12 19:03:54
- * @LastEditTime: 2024-03-16 20:41:47
+ * @LastEditTime: 2024-03-17 00:14:55
  * @Description: file content
  * @FilePath: \pages\index.tsx
  */
@@ -13,7 +13,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { WalletButton } from "@rainbow-me/rainbowkit";
 import { useAccount, useBalance } from "wagmi";
-import Vote from "./vote";
+import {Vote} from "./vote";
 const Home: NextPage = () => {
   const { address, isConnected, status } = useAccount();
   const { connector } = useAccount();
@@ -28,9 +28,13 @@ const Home: NextPage = () => {
         <link href="/favicon.ico" rel="icon" />
       </Head>
       <main className={styles.main}>
-       <div className="mb-3">
-        <ConnectButton label={!isConnected?`请连接钱包并切换至sepolia...`:`Connect Wallet`} />
+        <h1 className='font-bold text-4xl'>Voting-DApp</h1>
+        <p className="text-2xl mb-2">
+          Welcome to VotingDapp, a decentralized voting application built on
+          Ethereum.</p>
 
+       <div className="mb-3">
+        <ConnectButton label={!isConnected?`请连接钱包并切换至sepolia...`:`Connect Wallet`} accountStatus="avatar" />
        </div>
         {/* <h1>value is: {balance.data?.formatted}</h1> */}
        {isConnected&&<Vote></Vote>}
