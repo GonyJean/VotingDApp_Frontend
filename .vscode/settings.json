@@ -1,0 +1,688 @@
+{
+    "terminal.integrated.profiles.windows": {
+        "Git Bash": {
+            "path": [
+                "C:\\ProgramFiles\\Git\\bin\\bash.exe"
+            ],
+            "args": []
+        },
+    },
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "vetur.format.defaultFormatter.html": "js-beautify-html",
+    "vetur.format.defaultFormatter.css": "prettier",
+    "vetur.format.defaultFormatter.postcss": "prettier",
+    "vetur.format.defaultFormatter.scss": "prettier",
+    "vetur.format.defaultFormatter.less": "prettier",
+    "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
+    "vetur.format.defaultFormatter.js": "prettier",
+    "vetur.format.defaultFormatter.ts": "prettier",
+    "vetur.format.defaultFormatter.sass": "sass-formatter",
+    "vetur.format.defaultFormatterOptions": {
+        // "js-beautify-html": {
+        //   "wrap_line_length": 100,
+        //   "wrap_attributes": "auto"
+        // },
+        "prettier": {
+            // Prettier option here
+            //   "trailingComma": "es5", // 多行时，尽可能打印尾随的逗号
+            //   "tabWidth": 4, // 会忽略vetur的tabSize配置
+            //   "useTabs": false, // 是否利用tab替代空格
+            "semi": true, // 句尾是否加;
+            "singleQuote": false, // 使用单引号而不是双引号
+            "trailingComma": "none",
+            "arrowParens": "avoid" // allow paren-less arrow functions 箭头函数的参数使用圆括号
+        }
+        // "prettyhtml": {
+        //   // 单行超过100个长度的时候开始换行
+        //   "printWidth": 100,
+        //   "tabWidth": 2,
+        //   "useTabs": false,
+        //   "singleQuote": false,
+        //   "wrapAttributes": true,
+        //   "sortAttributes": true
+        // }
+    },
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+    "sublimeTextKeymap.promptV3Features": true,
+    "editor.foldingStrategy": "auto",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    // following will be in italic (=FlottFlott)
+                    "comment",
+                    "keyword"
+                ],
+                "settings": {
+                    // "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    // following will be excluded from italics (VSCode has some defaults for italics)
+                    "invalid",
+                    "keyword.operator",
+                    "constant.numeric.css",
+                    "keyword.other.unit.px.css",
+                    "constant.numeric.decimal.js",
+                    "constant.numeric.json"
+                ],
+                "settings": {
+                    "fontStyle": ""
+                }
+            },
+            {
+                "scope": [
+                    // following will be red
+                    "entity.name.section"
+                ],
+                "settings": {
+                    "foreground": "#FF0000"
+                }
+            }
+        ]
+    },
+    "editor.fontSize": 21,
+    // "editor.fontFamily": "Fira Code",
+    "editor.fontWeight": "300",
+    "terminal.integrated.fontSize": 18,
+    "editor.autoIndent": "advanced",
+    "editor.snippetSuggestions": "top",
+    "files.autoSave": "onFocusChange",
+    "eslint.format.enable": true,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "eslint.server.trace": "messages",
+    // "editor.formatOnPaste": true,
+    "javascript.format.enable": false,
+    "gitlens.advanced.messages": {
+        "suppressFileNotUnderSourceControlWarning": true,
+        "suppressShowKeyBindingsNotice": true
+    },
+    "files.eol": "\n",
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "vue-html": "html",
+        "vue": "html"
+    },
+    "emmet.syntaxProfiles": {
+        "javascript": "jsx",
+        "vue-html": "html",
+        "vue": "html"
+    },
+    "emmet.triggerExpansionOnTab": true,
+    "workbench.colorTheme": "Monokai",
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+    "window.menuBarVisibility": "default",
+    "cSpell.language": "en,en-GB,en-US",
+    "editor.tabSize": 2,
+    "workbench.startupEditor": "welcomePage",
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+    // 定义控制块的左括号是否放置在新的一行。
+    "javascript.format.placeOpenBraceOnNewLineForControlBlocks": false,
+    // 定义控制块的左括号是否放置在新的一行。
+    "typescript.format.placeOpenBraceOnNewLineForControlBlocks": false,
+    "javascript.format.placeOpenBraceOnNewLineForFunctions": false,
+    "typescript.format.placeOpenBraceOnNewLineForFunctions": false,
+    "eslint.enable": true, // 是否开启检测
+    // "eslint.autoFixOnSave": true,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "jsx",
+        "tsx",
+        "typescriptreact",
+        "html",
+        "vue",
+        "markdown",
+        "json"
+    ],
+    "git.ignoreMissingGitWarning": true,
+    "editor.detectIndentation": false,
+    "editor.tabSize": 4,
+    "gitlens.historyExplorer.enabled": true,
+    "explorer.confirmDelete": false,
+    "git.enableSmartCommit": true,
+    "gitlens.views.fileHistory.enabled": true,
+    "sync.gist": "f189dbd9a7ac3e422ee9e45ba3a2d0f3",
+    // "http.systemProxy": "on",
+    // "http.proxy": "http://127.0.0.1:1081",
+    "sync.autoUpload": false,
+    "[wxml]": {},
+    "files.associations": {
+        "*.wxml": "html",
+        "*.vue": "vue",
+        ".eslintrc": "json"
+    },
+    "docthis.includeAuthorTag": true,
+    "docthis.includeDateTag": true,
+    "docthis.includeDescriptionTag": true,
+    "editor.fontLigatures": true,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "terminal.integrated.rendererType": "dom",
+    "[less]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "vsicons.dontShowNewVersionMessage": true,
+    "leetcode.endpoint": "leetcode-cn",
+    "leetcode.workspaceFolder": "C:\\Users\\chenjiang\\.leetcode",
+    "leetcode.defaultLanguage": "javascript",
+    "leetcode.showCommentDescription": true,
+    "markdown.preview.fontSize": 16,
+    "terminal.integrated.she": [
+        "-l"
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "always"
+    },
+    "fileheader.configObj": {
+        "autoAddLine": 100,
+        "language": {
+            "javascript": {
+                "head": "/**",
+                "middle": "* @",
+                "end": " **/"
+            },
+            // 针对有特殊要求的文件如：test.blade.php
+            "blade.php": {
+                "head": "<!--",
+                "middle": " * @",
+                "end": "-->"
+            }
+        },
+        "autoAdd": true
+    },
+    "fileheader.customMade": {
+        "Author": "Yxj",
+        "LastEditors": "Yxj",
+        "Date": "Do not edit",
+        "LastEditTime": "Do not edit",
+        "Description": "file content",
+        "FilePath": "no item name"
+    },
+    "beautify.ignore": "",
+    "[lua]": {
+        "editor.defaultFormatter": "Koihik.vscode-lua-format"
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "http.proxyAuthorization": null,
+    "super-stock.favorite": {
+        "sh600197": [
+            "NaN",
+            "NaN"
+        ],
+        "sh600029": [
+            "5.00",
+            "6.50"
+        ],
+        "sz002100": [
+            "NaN",
+            "19.00"
+        ],
+        "sz002594": [
+            "NaN",
+            "NaN"
+        ],
+        "sh000001": [
+            "NaN",
+            "NaN"
+        ]
+    },
+    "remote.extensionKind": {
+        "pub.name": [
+            "ui"
+        ]
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "gitlens.views.repositories.enabled": true,
+    "gitlens.views.commits.files.layout": "list",
+    "leek-fund.stocks": [
+        "sh601127",
+        "sz000977",
+        "sh600438",
+        "sh000001",
+        "sz399006",
+        "sh600559",
+        "sh600372",
+        "sh000300",
+        "sh000016",
+        "sh000688",
+        "hk03690",
+        "hk00700",
+        "usr_ixic",
+        "usr_dji",
+        "usr_inx",
+        "sh600197",
+        "sz002100",
+        "sh600029",
+        "sh600519",
+        "sz000858",
+        "sz002594",
+        "sz000951",
+        "sh600104",
+        "sz000799",
+        "sh512800",
+        "sz002183",
+        "hk01281",
+        "sh601012",
+        "sz001896",
+        "sz000966",
+        "sh600419",
+        "sh603288",
+        "sh603027",
+        "sz300274"
+    ],
+    "leek-fund.stocksRemind": {
+        "sz000066": {
+            "price": [],
+            "percent": [
+                "+3",
+                "-3"
+            ]
+        },
+        "sz002100": {
+            "price": [],
+            "percent": [
+                "+3",
+                "-3"
+            ]
+        },
+        "sh600029": {
+            "price": [],
+            "percent": [
+                "+3",
+                "-3"
+            ]
+        },
+        "sh600438": {
+            "price": [
+                "-40"
+            ],
+            "percent": []
+        }
+    },
+    "leek-fund.statusBarStock": [],
+    "leek-fund.stockRemindSwitch": 0,
+    "leek-fund.xueqiuCookie": "device_id=24700f9f1986800ab4fcc880530dd0ed; s=d411k1mifz; Hm_lvt_1db88642e346389874251b5a1eded6e3=1609826407,1609826412,1609826457,1610334519; xq_a_token=0843b0e5215a5803c066f54cabc102e9ebd41894; xqat=0843b0e5215a5803c066f54cabc102e9ebd41894; xq_r_token=8dcf7e8e00b82414910cbd5957c77b37be87c2f1; xq_id_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1aWQiOjE0MzY1OTM0MjUsImlzcyI6InVjIiwiZXhwIjoxNjEyOTI2NTMxLCJjdG0iOjE2MTAzMzQ1MzE0MDksImNpZCI6ImQ5ZDBuNEFadXAifQ.M1CBAqEhC90WZx46C9yKLb5ReOQqg5yJU8DmURjUn7T_a4ibmgd3jWq_T_qeT7IZDC05wAYjiIEexLsq40F6g2BQK_Cb9l9vd1RrTyR_h7UUjDZ_cIm01Qu1IOwhGnEEr3ys5OKSPwYpzvY67ZHCAnbk_rBrjEAk-EC0n1OtOsbKNzoiMrSmhLOItlhRhldLS5ImP4er6JaCV9LG8Lx2dvFgr5L4iUnKvKyhzD66MURNJ80IORUC1uQt0TQkf5Kb3jWq8j0xxp0xrYQUKHQ94K5bj04WxD_qNDT4g5RxocnOxDlJWsclmyStUTzFAEfa_WpGYuspOAXW0G8oJ1R8-A; xq_is_login=1; u=1436593425; is_overseas=0; Hm_lpvt_1db88642e346389874251b5a1eded6e3=1610334534",
+    "leek-fund.newsUserIds": [
+        "5124430882",
+        "1287305957",
+        "9945824706",
+        "5266234546"
+    ],
+    "leek-fund.funds": [
+        []
+    ],
+    "leek-fund.fundSort": -2,
+    "leek-fund.fundAmount": {
+        "161725": {
+            "name": "招商中证白酒指数(LOF)A",
+            "amount": 0,
+            "price": "0.8803",
+            "unitPrice": 0,
+            "earnings": 0,
+            "priceDate": "2024-02-08"
+        },
+        "320007": {
+            "name": "诺安成长混合",
+            "amount": 0,
+            "price": "1.0370",
+            "unitPrice": 0,
+            "earnings": 0,
+            "priceDate": "2024-02-08"
+        },
+        "004744": {
+            "name": "易方达创业板ETF联接C",
+            "amount": 0,
+            "price": "1.7451",
+            "unitPrice": 2.126,
+            "earnings": 71.09,
+            "priceDate": "2024-02-08"
+        },
+        "001475": {
+            "name": "易方达国防军工混合A",
+            "amount": 0,
+            "price": "1.1420",
+            "unitPrice": 1.4913,
+            "earnings": 8.95,
+            "priceDate": "2024-02-08"
+        },
+        "007883": {
+            "name": "易方达医药ETF联接C",
+            "amount": 0,
+            "price": "0.9021",
+            "unitPrice": 1.0216,
+            "earnings": -3.25,
+            "priceDate": "2024-02-08"
+        },
+        "003494": {
+            "name": "富国天惠成长混合C",
+            "amount": 0,
+            "price": "2.2422",
+            "unitPrice": 3.929,
+            "earnings": 4.62,
+            "priceDate": "2024-02-08"
+        },
+        "002190": {
+            "name": "农银新能源主题A",
+            "amount": 0,
+            "price": "2.0134",
+            "unitPrice": 2.744,
+            "earnings": 7.29,
+            "priceDate": "2024-02-08"
+        },
+        "004348": {
+            "name": "南方中证500ETF联接C",
+            "amount": 0,
+            "price": "1.3993",
+            "unitPrice": 1.6743,
+            "earnings": 5.02,
+            "priceDate": "2024-02-08"
+        }
+    },
+    "leek-fund.immersiveBackground": true,
+    "leek-fund.stockSort": 0,
+    "diffEditor.maxComputationTime": 0,
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]"
+    ],
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+    "gitlens.gitCommands.skipConfirmations": [
+        "fetch:command",
+        "stash-push:command"
+    ],
+    "[typescript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "todo-tree.tree.showCountsInTree": true,
+    "cointy.coinmarketcap.apiKey": "81a6cbb4-f10c-4289-9971-d2dfdea27ce7",
+    "leek-fund.flash-news": true,
+    "leek-fund.binance": [
+        "BTC_USDT",
+        "DOGE_USDT",
+        "ETH_USDT",
+        "EOS_USDT",
+        "SHIB_USDT",
+        "ICP_USDT"
+    ],
+    "leek-fund.hideFundBarItem": true,
+    "touchsprite-extension.accessKey": "EV3seQsnNNwLpwI1w0ltEeukFCK1pFUSY84AZZF0ogpQ83YWTYoOcBWYjPgX4OIA",
+    "touchsprite-extension.cookie": "UM_distinctid=17e99f64c8c120-0da8ddc374bf52-f791b31-1fa400-17e99f64c8d4ae; Hm_lvt_5d0fe04f147a8337d03bb6a9236c5437=1643260562,1643262314,1643272657,1643277436; Hm_lpvt_5d0fe04f147a8337d03bb6a9236c5437=1643277822; auto_login=true; PHPSESSID=85c162d3eac574e966c0a7cd0879f138; gointo=true; CNZZDATA1274866994=2119684621-1643278118-https%253A%252F%252Fdev.touchsprite.com%252F%7C1643278118",
+    "touchsprite-extension.osType": "苹果",
+    "Lua.workspace.library": [
+        "D:\\cheat\\tslib_d.lua"
+    ],
+    "snapshop-touchsprite-plugin.ip": "127.0.0.1",
+    "editor.inlineSuggest.enabled": true,
+    "vue.codeActions.savingTimeLimit": 1000000,
+    "terminal.integrated.automationProfile.linux": {},
+    "git.openRepositoryInParentFolders": "always",
+    "eslint.codeActionsOnSave.rules": null,
+    "eslint.codeAction.showDocumentation": {
+        "enable": true, // 在快速修复菜单中显示打开的皮棉规则文档网页。true默认。
+    },
+    "eslint.options": {
+        // 全局配置文件位置
+        // "overrideConfigFile": "C:/Users/yxj/AppData/Roaming/npm/node_modules/.eslintrc.js"
+    },
+    "eslint.lintTask.enable": true,
+    // "eslint.nodePath": "C:/Users/yxj/AppData/Roaming/npm/node_modules",
+    "[ahk]": {
+        "editor.defaultFormatter": "cweijan.vscode-autohotkey-plus"
+    },
+    "highlight.regex.regexes": [
+        {
+            "languageIds": [
+                "c",
+                "cpp",
+                "go",
+                "java",
+                "javascript",
+                "php",
+                "rust",
+                "typescript",
+                "vue"
+            ],
+            "regexes": [
+                {
+                    // regex to find all within comments
+                    "regex": "(/\\*[^]*?\\*/)|(//[^]*?(?:(?<!\\\\)$))",
+                    "regexFlag": "gm",
+                    "regexLimit": 25000,
+                    "regexes": [
+                        {
+                            "index": 0, // 0 for take all regex match (this is optionnal)
+                            "regex": "\\b(TODO)\\b|\\b(TADA)\\b",
+                            "regexFlag": "gmi",
+                            "regexLimit": 25000,
+                            "decorations": [
+                                {
+                                    "index": 1, // index match regex group (TODO)
+                                    "borderRadius": "4px",
+                                    "fontWeight": "bold",
+                                    "overviewRulerColor": "#FF9900FF",
+                                    "overviewRulerLane": 4,
+                                    "light": {
+                                        "color": "#000000",
+                                        "backgroundColor": "#FF990050",
+                                        "border": "1px solid #FF990090"
+                                    },
+                                    "dark": {
+                                        "color": "#FFFFFF",
+                                        "backgroundColor": "#FF990090",
+                                        "border": "1px solid #FF990050"
+                                    }
+                                },
+                                {
+                                    "index": 2, // (TADA)
+                                    "borderRadius": "4px",
+                                    "fontWeight": "bold",
+                                    "overviewRulerColor": "#FF0000FF",
+                                    "overviewRulerLane": 4,
+                                    "light": {
+                                        "color": "#000000",
+                                        "backgroundColor": "#FF000050",
+                                        "border": "1px solid #FF000090"
+                                    },
+                                    "dark": {
+                                        "color": "#FFFFFF",
+                                        "backgroundColor": "#FF990090",
+                                        "border": "1px solid #FF990050"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "highlight.regexes": {
+        "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *TODO(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+            "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+            "decorations": [
+                {
+                    "overviewRulerColor": "#ffcc00",
+                    "backgroundColor": "#ffcc00",
+                    "color": "#1f1f1f",
+                    "fontWeight": "bold"
+                },
+                {
+                    "backgroundColor": "#ffcc00",
+                    "color": "#1f1f1f"
+                }
+            ]
+        },
+        "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:FIXME|FIX|BUG|UGLY|DEBUG|HACK)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+            "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+            "decorations": [
+                {
+                    "overviewRulerColor": "#cc0000",
+                    "backgroundColor": "#cc0000",
+                    "color": "#1f1f1f",
+                    "fontWeight": "bold"
+                },
+                {
+                    "backgroundColor": "#cc0000",
+                    "color": "#1f1f1f"
+                }
+            ]
+        },
+        "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:REVIEW|OPTIMIZE|TSC)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+            "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+            "decorations": [
+                {
+                    "overviewRulerColor": "#00ccff",
+                    "backgroundColor": "#00ccff",
+                    "color": "#1f1f1f",
+                    "fontWeight": "bold"
+                },
+                {
+                    "backgroundColor": "#00ccff",
+                    "color": "#1f1f1f"
+                }
+            ]
+        },
+        "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:IDEA)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+            "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+            "decorations": [
+                {
+                    "overviewRulerColor": "#cc00cc",
+                    "backgroundColor": "#cc00cc",
+                    "color": "#1f1f1f",
+                    "fontWeight": "bold"
+                },
+                {
+                    "backgroundColor": "#cc00cc",
+                    "color": "#1f1f1f"
+                }
+            ]
+        }
+    },
+    "http.proxySupport": "on",
+    "typeChallenges.workspaceFolder": "d:\\person\\ts\\challenges",
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": false,
+        "scminput": false
+    },
+    "vim.handleKeys": {
+        "<C-d>": false,
+        "<C-s>": false,
+        "<C-z>": false,
+        "<C-w>": false,
+        "<C-f>": false,
+        "<C-x>": false,
+        "<C-v>": false,
+        "<C-c>": false,
+        "<C-a>": false,
+        "<C-y>": false,
+    },
+    "vim.operatorPendingModeKeyBindings": [
+        {
+            "before": [
+                "H"
+            ],
+            "after": [
+                "^"
+            ]
+        },
+        {
+            "before": [
+                "L"
+            ],
+            "after": [
+                "g",
+                "_"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "H"
+            ],
+            "after": [
+                "^"
+            ]
+        },
+        {
+            "before": [
+                "L"
+            ],
+            "after": [
+                "g",
+                "_"
+            ]
+        }
+    ],
+    "gitlens.views.branches.branches.layout": "list",
+    "security.allowedUNCHosts": [
+        "ds918NAS",
+        "192.168.192.191"
+    ],
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.fontFamily": "monospace",
+    "explorer.confirmDragAndDrop": false,
+    "search.followSymlinks": false,
+    "remote.SSH.remotePlatform": {
+        "192.168.192.191": "linux"
+    },
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+        },
+        "zsh": {
+            "path": "zsh"
+        },
+        "fish": {
+            "path": "fish"
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        "pwsh": {
+            "path": "pwsh",
+            "icon": "terminal-powershell"
+        }
+    },
+    "remote.SSH.configFile": "C:\\Program Files\\Git\\usr\\bin\\ssh.exe",
+    "window.zoomLevel": -1,
+    "settingsSync.ignoredSettings": [],
+    "[dockercompose]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "arduino.useArduinoCli": true
+}

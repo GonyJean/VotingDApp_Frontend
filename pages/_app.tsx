@@ -2,7 +2,7 @@ import '../styles/globals.css';
 import '@rainbow-me/rainbowkit/styles.css';
 import '../styles/tailwind.css';
 import type { AppProps } from 'next/app';
-import {NextUIProvider} from "@nextui-org/react";
+import { NextUIProvider } from '@nextui-org/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { WagmiProvider } from 'wagmi';
 import {
@@ -38,9 +38,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     <WagmiProvider config={config}>
       <QueryClientProvider client={client}>
         <RainbowKitProvider>
-            <NextUIProvider>
-          <Component {...pageProps} />
-            </NextUIProvider>
+          <NextUIProvider>
+            <Component {...pageProps} />
+          </NextUIProvider>
         </RainbowKitProvider>
       </QueryClientProvider>
     </WagmiProvider>
