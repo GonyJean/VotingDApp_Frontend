@@ -2,9 +2,9 @@
  * @Author: Yxj
  * @LastEditors: Yxj
  * @Date: 2024-03-12 19:03:54
- * @LastEditTime: 2024-03-16 17:46:35
+ * @LastEditTime: 2024-03-16 20:41:47
  * @Description: file content
- * @FilePath: \my-rainbowkit-app\pages\index.tsx
+ * @FilePath: \pages\index.tsx
  */
 import React from "react";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
@@ -28,7 +28,10 @@ const Home: NextPage = () => {
         <link href="/favicon.ico" rel="icon" />
       </Head>
       <main className={styles.main}>
+       <div className="mb-3">
         <ConnectButton label={!isConnected?`请连接钱包并切换至sepolia...`:`Connect Wallet`} />
+
+       </div>
         {/* <h1>value is: {balance.data?.formatted}</h1> */}
        {isConnected&&<Vote></Vote>}
       </main>
