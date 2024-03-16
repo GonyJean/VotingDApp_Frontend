@@ -1,7 +1,7 @@
 # VotingDapp-去中心化投票系统
 
 ## Getting Started
-`pnpm install`
+`pnpm install`  
 `pnpm run dev`
 
 ## 应用目的
@@ -14,7 +14,7 @@
 ## 合约开发
 
 使用 `solidity` 开发,部署在 `sepolia` 测试链  
-合约地址1:`0x0d77736F42EF631771550Ec616D202c4dc2A530B`  (有imgUrl参数)
+合约地址1:`0x0d77736F42EF631771550Ec616D202c4dc2A530B`  (有imgUrl参数)  
 合约地址2:`0xEF9a9493E0312CbF08fa999b4B7570af86554A44`  (无imgUrl参数)  
 合约项目地址:[VotingDapp_Contract](https://github.com/GonyJean/VotingDapp_Contract)
 ![这是图片](/img/markmap.png "合约流程")
