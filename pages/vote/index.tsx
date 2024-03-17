@@ -2,7 +2,7 @@
  * @Author: Yxj
  * @LastEditors: Yxj
  * @Date: 2024-03-15 17:29:10
- * @LastEditTime: 2024-03-17 15:58:21
+ * @LastEditTime: 2024-03-17 18:43:09
  * @Description: file content
  * @FilePath: \pages\vote\index.tsx
  */
@@ -188,7 +188,7 @@ export default function Vote() {
                     ) : isConfirmed ? (
                       `交易已确认。`
                     ) : (
-                      <Spinner></Spinner>
+                      <Spinner label="正在确认信息,请等待..." ></Spinner>
                     )}
                   </ModalBody>
                   <ModalFooter>
