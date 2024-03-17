@@ -73,7 +73,7 @@ export default function VoteForm (
                 <Input type="text" label="投票名称" onValueChange={(v)=>{
                     setquestionStr(v);
                 }} />
-                <Input type="text" label="投票图片链接" placeholder='为避免gas消耗建议您填入短链接' onValueChange={(v)=>{
+                <Input type="text" label="投票图片链接" placeholder='如果图片未加载出来说明地址防盗链,自动替换占位图' onValueChange={(v)=>{
                     setquestionImgUrlStr(v);
                 }} />
               </ModalBody>
