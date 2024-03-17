@@ -2,7 +2,7 @@
  * @Author: Yxj
  * @LastEditors: Yxj
  * @Date: 2024-03-15 17:29:10
- * @LastEditTime: 2024-03-17 01:41:23
+ * @LastEditTime: 2024-03-17 15:16:38
  * @Description: file content
  * @FilePath: \pages\vote\index.tsx
  */
@@ -40,16 +40,16 @@ import {
   ModalFooter,
   useDisclosure,
 } from "@nextui-org/react";
-import { abi } from "./abi";
-import { VoteForm } from "./form";
+import  abi  from "../../abi/abi";
+import  VoteForm  from "./form";
 export interface writeContractType {
   abi: readonly any[];
   address: `0x${string}`;
   functionName: string;
   args: any[];
 }
-export const Vote = () => {
-  const { address } = useAccount();
+export default function Vote () {
+  const { address,chain } = useAccount();
   const { data: hash, writeContract, isPending, error } = useWriteContract();
   const {
     isLoading: isConfirming,
@@ -87,29 +87,20 @@ export const Vote = () => {
 
   return (
     <div className="text-center">
-      {/* <h3>Read contract</h3> */}
-      {/* Balance of your wagmi NFT : {data?.toString()} */}
-      {/* <Button
-        className=""
-        color="primary"
-        style={{ marginLeft: "8px" }}
-        onPress={(e) => {
-          refetch();
-        }}
-      >
-        {isFetching ? "读取合约信息..." : "读取完毕"}
-      </Button> */}
-      <Button
+    {/* 判断当前是否为sepolia链 */}
+    {chain?.name === 'Sepolia' ? 
+   <>
+          <Button
         color="primary"
         className="w-unit-6xl mb-3"
-        onClick={(e) => {
+        onClick={ (e) => {
           setVoteFormOpen(true);
-        }}
+        } }
       >
         创建新投票
       </Button>
       {data?.map((e, i) => (
-        <Card className="py-4 mb-3" key={i}>
+        <Card className="py-4 mb-3" key={ i }>
           <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
             <h4 className="font-bold text-large">{e.name}</h4>
           </CardHeader>
@@ -117,8 +108,8 @@ export const Vote = () => {
             <Image
               alt="Card background"
               className="object-cover rounded-xl"
-              src={e.imgUrl}
-              width={270}
+              src={ e.imgUrl }
+              width={ 270 }
             />
           </CardBody>
           <div className="justify-center flex mb-1">
@@ -134,11 +125,11 @@ export const Vote = () => {
 
           <div className="justify-center flex">
             <Button
-              isLoading={isPending || isConfirming}
+              isLoading={ isPending || isConfirming }
               size="sm"
               color="primary"
               className="mr-5"
-              onClick={() => {
+              onClick={ () => {
                 dispatchContract({
                   abi,
                   address: "0x0d77736F42EF631771550Ec616D202c4dc2A530B",
@@ -146,14 +137,14 @@ export const Vote = () => {
                   args: [i, true],
                 });
                 onOpen();
-              }}
+              } }
             >
               {isPending || isConfirming ? `交易确认中...` : `赞成`}
             </Button>
             <Button
               size="sm"
               color="danger"
-              onClick={() => {
+              onClick={ () => {
                 dispatchContract({
                   abi,
                   address: "0x0d77736F42EF631771550Ec616D202c4dc2A530B",
@@ -161,7 +152,7 @@ export const Vote = () => {
                   args: [i, false],
                 });
                 onOpen();
-              }}
+              } }
             >
               {isPending || isConfirming ? `交易确认中...` : `反对`}
             </Button>
@@ -171,14 +162,14 @@ export const Vote = () => {
 
       <Modal
         backdrop="opaque"
-        isOpen={isOpen}
-        hideCloseButton={isConfirming || isPending}
-        isDismissable={false}
-        onOpenChange={onOpenChange}
-        classNames={{
+        isOpen={ isOpen }
+        hideCloseButton={ isConfirming || isPending }
+        isDismissable={ false }
+        onOpenChange={ onOpenChange }
+        classNames={ {
           backdrop:
             "bg-gradient-to-t from-zinc-900 to-zinc-900/10 backdrop-opacity-20",
-        }}
+        } }
       >
         <ModalContent>
           {(onClose) => (
@@ -199,8 +190,8 @@ export const Vote = () => {
                 {isPending || isConfirming ? null : (
                   <Button
                     color="primary"
-                    onPress={onClose}
-                    isLoading={isPending || isConfirming}
+                    onPress={ onClose }
+                    isLoading={ isPending || isConfirming }
                   >
                     确定
                   </Button>
@@ -211,13 +202,16 @@ export const Vote = () => {
         </ModalContent>
       </Modal>
       <VoteForm
-        open={voteFormOpen}
-        setVoteFormOpen={setVoteFormOpen}
-        dispatchContract={dispatchContract}
-        isPending={isPending}
-        isConfirming={isConfirming}
-        isConfirmed={isConfirmed}
+        open={ voteFormOpen }
+        setVoteFormOpen={ setVoteFormOpen }
+        dispatchContract={ dispatchContract }
+        isPending={ isPending }
+        isConfirming={ isConfirming }
+        isConfirmed={ isConfirmed }
       ></VoteForm>
+   </>
+    :<div>当前项目仅支持sepolia,请切换至sepolia测试网</div>}
+     
     </div>
   );
 };

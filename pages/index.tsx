@@ -2,7 +2,7 @@
  * @Author: Yxj
  * @LastEditors: Yxj
  * @Date: 2024-03-12 19:03:54
- * @LastEditTime: 2024-03-17 00:58:20
+ * @LastEditTime: 2024-03-17 02:27:31
  * @Description: file content
  * @FilePath: \pages\index.tsx
  */
@@ -13,7 +13,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { WalletButton } from "@rainbow-me/rainbowkit";
 import { useAccount, useBalance } from "wagmi";
-import {Vote} from "./vote";
+import Vote from "./vote";
 const Home: NextPage = () => {
   const { address, isConnected, status } = useAccount();
   const { connector } = useAccount();

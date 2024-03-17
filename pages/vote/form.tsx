@@ -10,7 +10,7 @@ import {
   Checkbox,
   Input,
 } from "@nextui-org/react";
-import { abi } from "./abi";
+import  abi   from "../../abi/abi";
 import { writeContractType } from "./index";
 type DispatchContract = ({
   abi,
@@ -30,9 +30,9 @@ interface voteFormProps {
     isConfirmed: boolean;
 }
 
-export const VoteForm = (
+export default function VoteForm (
   { open,setVoteFormOpen,dispatchContract,isPending,isConfirming,isConfirmed }:voteFormProps,
-) => {
+)  {
   const { isOpen, onOpen, onOpenChange,onClose } = useDisclosure();
   const [questionStr, setquestionStr] = useState("");
   const [questionImgUrlStr, setquestionImgUrlStr] = useState("");
@@ -73,7 +73,7 @@ export const VoteForm = (
                 <Input type="text" label="投票名称" onValueChange={(v)=>{
                     setquestionStr(v);
                 }} />
-                <Input type="text" label="投票图片链接" onValueChange={(v)=>{
+                <Input type="text" label="投票图片链接" placeholder='为避免gas消耗建议您填入短链接' onValueChange={(v)=>{
                     setquestionImgUrlStr(v);
                 }} />
               </ModalBody>

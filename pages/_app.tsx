@@ -1,3 +1,11 @@
+/*
+ * @Author: Yxj
+ * @LastEditors: Yxj
+ * @Date: 2024-03-16 19:30:30
+ * @LastEditTime: 2024-03-17 02:08:37
+ * @Description: file content
+ * @FilePath: \pages\_app.tsx
+ */
 import '../styles/globals.css';
 import '@rainbow-me/rainbowkit/styles.css';
 import '../styles/tailwind.css';
@@ -35,11 +43,11 @@ const client = new QueryClient();
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <WagmiProvider config={config}>
-      <QueryClientProvider client={client}>
+    <WagmiProvider config={ config }>
+      <QueryClientProvider client={ client }>
         <RainbowKitProvider>
           <NextUIProvider>
-            <Component {...pageProps} />
+            <Component { ...pageProps }/>
           </NextUIProvider>
         </RainbowKitProvider>
       </QueryClientProvider>

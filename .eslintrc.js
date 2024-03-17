@@ -1,10 +1,10 @@
 /**
  * @Author: Yxj
- * @LastEditors: Yxj
+* @LastEditors: Yxj
  * @Date: 2024-03-16 14:42:31
- * @LastEditTime: 2024-03-16 15:22:10
+* @LastEditTime: 2024-03-17 02:33:38
  * @Description: file content
- * @FilePath: \my-rainbowkit-app\.eslintrc.js
+* @FilePath: \.eslintrc.js
  * 
  */
 module.exports = {
@@ -12,13 +12,17 @@ module.exports = {
     browser: true,
     es2021: true,
   },
+//   root:true,
+  parser: "@babel/eslint-parser",
   extends: [
     /*
-     * "standard-with-typescript",
+     *"standard-with-typescript",
      * "plugin:react/recommended",
      */
+    "standard-with-typescript",
     'eslint:recommended',
     'plugin:react/recommended',
+    'next/core-web-vitals',
     /*
      * 'airbnb',
      * 'next/core-web-vitals',
@@ -38,10 +42,12 @@ module.exports = {
     },
   ],
   parserOptions: {
+    requireConfigFile: false,
     ecmaVersion: 'latest',
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
+      modules: true,
     },
   },
   settings: {
@@ -54,6 +60,7 @@ module.exports = {
   ],
   rules: {
     // 在这里添加或修改规则
+    'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx', '.ts', '.tsx'] }],
     'react/jsx-max-props-per-line': [2, { maximum: 1, when: 'multiline' }], // 每行一个属性
      'func-names': 0,
       'arrow-parens': 0,

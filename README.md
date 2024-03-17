@@ -1,3 +1,11 @@
+<!--
+ * @Author: Yxj
+ * @LastEditors: Yxj
+ * @Date: 2024-03-16 19:30:30
+ * @LastEditTime: 2024-03-17 15:27:23
+ * @Description: file content
+ * @FilePath: \README.md
+-->
 # VotingDapp-去中心化投票系统
 
 ## Getting Started
@@ -28,4 +36,4 @@
  √ 每个投票的交互  
  √ 允许用户选择投票并提交他们的选择。  
  √ 展示投票结果。  
-提供创建投票的表单。
+ √ 提供创建投票的表单。
