@@ -32,7 +32,7 @@
 
 前端项目入口:[VotingDApp](https://gonyjean.github.io/)  
 测试网有时候延迟较大,提交完成后请耐心等待
-
+![这是图片](/img/frontend/3.png "前端")
 ## TODO:
 
  √ 显示所有投票问题。  
