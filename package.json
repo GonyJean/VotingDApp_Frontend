@@ -1,5 +1,6 @@
 {
   "name": "my-rainbowkit-app",
+  "homepage": "https://gonyjean.github.io/VotingDApp_Frontend/",
   "private": true,
   "version": "0.1.0",
   "scripts": {
