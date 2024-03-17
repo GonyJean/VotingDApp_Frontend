@@ -24,7 +24,7 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>VotingDapp</title>
+        <title>VotingDApp</title>
         <link href="/favicon.ico" rel="icon" />
       </Head>
       <main className={styles.main}>
